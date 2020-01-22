@@ -9,8 +9,129 @@
       href="https://fonts.googleapis.com/css?family=Lato&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/4acde07e6e.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="/dist/css/main.css" />
     <title>Yuki Sugaya</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo"><h1></h1></div>
+        <div class="navbar">
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Works</li>
+            <li>Blog</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="profile section">
+        <div class="container">
+          <div class="inner">
+            <div class="name"><h1>Yuki Sugaya</h1></div>
+            <div class="social">
+              <ul>
+                <li><i class="fab fa-github"></i></li>
+                <li><i class="fab fa-linkedin"></i></li>
+                <li><i class="fab fa-facebook-square"></i></li>
+                <li><i class="fab fa-instagram"></i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="icon"></div>
+        </div>
+      </div>
+
+      <div class="about section">
+        <h2>About me</h2>
+        <p>
+          Hi, I’m Yuki Sugaya. I’m studying Web Development at CICCC in
+          Vancouver. I’m interested in these skills.
+        </p>
+        <div class="skills">
+          <ul>
+            <li class="skill">HTML5</li>
+            <li class="skill">CSS3</li>
+            <li class="skill">JavaScript</li>
+            <li class="skill">Node</li>
+            <li class="skill">React</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="works section">
+        <h2>Works</h2>
+        <div class="container">
+          <div class="card work">
+            <h3>Title</h3>
+            <p>This project is made by Yuki Sugaya.</p>
+            <div>
+              <img src="https://dummyimage.com/300x200/000/fff" alt="" />
+            </div>
+          </div>
+          <div class="card work">
+            <h3>Title</h3>
+            <p>This project is made by Yuki Sugaya.</p>
+            <div>
+              <img src="https://dummyimage.com/300x200/000/fff" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog section">
+        <h2>Blog</h2>
+        <div class="article">
+          <h3><a href="#">How to install nodenv</a></h3>
+          <p>5 days ago</p>
+        </div>
+        <div class="article">
+          <h3><a href="#">Making sticky footer</a></h3>
+          <p>6 days ago</p>
+        </div>
+        <div class="article">
+          <h3><a href="#">How to install stylelint</a></h3>
+          <p>11 days ago</p>
+        </div>
+      </div>
+
+      <div class="contact section">
+        <h2>Contact</h2>
+        <form name="form">
+          <input
+            class="name input input-form"
+            name="name"
+            type="text"
+            placeholder="Name"
+          />
+          <input
+            class="email input input-form"
+            name="email"
+            type="email"
+            placeholder="Email"
+          />
+          <textarea
+            class="message input input-form"
+            name="message"
+            cols="30"
+            rows="10"
+            placeholder="Message"
+          ></textarea>
+          <input class="btn input" type="button" value="Submit" />
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <p>Yuki Sugaya @ 2020</p>
+    </footer>
+  </body>
 </html>

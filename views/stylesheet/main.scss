@@ -1,3 +1,17 @@
+// config
+@import './config/color';
+
+// modules
+@import './modules/_header';
+@import './modules/_main';
+@import './modules/_content';
+@import './modules/_footer';
+
 body {
   font-family: 'Lato', sans-serif;
+  color: $text-color-black;
+}
+
+.section {
+  margin-bottom: 150px;
 }
