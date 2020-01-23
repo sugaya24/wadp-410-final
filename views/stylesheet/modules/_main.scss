@@ -1,18 +1,39 @@
 @import '../mixin/btn';
+@import '../config/mq';
 
 main {
-  width: 960px;
+  width: $container-width-xl;
   margin: 200px auto 0;
+  @include mq-down(lg) {
+    width: $container-width-lg;
+  }
+  @include mq-down() {
+    width: $container-width-md;
+    margin: 0 auto;
+  }
   h2 {
     margin-bottom: 50px;
     font-size: 32px;
   }
   .profile {
-    width: 560px;
+    width: $container-width-xl;
     margin: 100px auto 200px;
+    @include mq-down(lg) {
+      width: $container-width-lg;
+    }
+    @include mq-down() {
+      width: $container-width-md;
+      margin: 50px auto 100px;
+    }
     .container {
+      position: relative;
       display: flex;
+      width: 560px;
       height: 200px;
+      margin: 0 auto;
+      @include mq-down(md) {
+        width: 400px;
+      }
     }
     .icon {
       width: 200px;
@@ -22,10 +43,21 @@ main {
       background-size: cover;
       border: 7px solid $sub-color-blue;
       border-radius: 50%;
+      @include mq-down(md) {
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        width: 100px;
+        height: 100px;
+        border: 4px solid $sub-color-blue;
+      }
     }
     .inner {
       height: 100px;
       margin: auto 100px auto 0;
+      @include mq-down(md) {
+        margin: auto 20px auto 0;
+      }
       .name {
         h1 {
           margin-bottom: 20px;
@@ -63,10 +95,30 @@ main {
     .container {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      @include mq-down() {
+        grid-template-columns: 1fr;
+      }
       .card {
         padding: 20px 50px;
-        margin: 0 auto;
+        margin: 0 auto 50px;
         box-shadow: 0px 5px 5px 3px rgba($color: #000000, $alpha: 0.1);
+        @include mq-down(lg) {
+          .img {
+            width: 200px;
+            margin: 0 auto;
+            img {
+              width: 200px;
+            }
+          }
+        }
+        @include mq-down() {
+          .img {
+            width: 300px;
+            img {
+              width: 300px;
+            }
+          }
+        }
         h3 {
           margin-bottom: 10px;
         }
@@ -104,6 +156,9 @@ main {
     .input {
       display: block;
       width: 50%;
+      @include mq-down() {
+        width: 100%;
+      }
       padding: 5px 10px;
       margin: 0 auto 10px;
       border: 1px solid $text-color-black;

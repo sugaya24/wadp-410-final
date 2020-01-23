@@ -1,23 +1,37 @@
 @import '../config/color';
+@import '../config/mq';
 
 header {
   position: fixed;
   top: 0;
+  z-index: 9999;
   width: 100%;
   margin-bottom: 50px;
   background-color: white;
   transition: all 0.3s;
   &.header-shadow {
     box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.3);
+    @include mq-down() {
+      box-shadow: none;
+    }
   }
-  .container {
+  .global-nav {
     display: flex;
     justify-content: space-between;
-    width: 960px;
+    width: $container-width-xl;
     height: 100px;
     margin: 0 auto;
     line-height: 100px;
+    @include mq-down(lg) {
+      width: $container-width-lg;
+    }
+    @include mq-down() {
+      display: none;
+    }
     .navbar ul {
+      @include mq-down() {
+        display: none;
+      }
       display: flex;
       li {
         margin-left: 20px;
@@ -33,6 +47,19 @@ header {
             border-bottom: 2px solid $text-color-black;
           }
         }
+      }
+    }
+  }
+  .hamburger-nav {
+    display: none;
+    height: 50px;
+    margin: 0 auto;
+    @include mq-down() {
+      display: flex;
+      justify-content: space-between;
+      width: $container-width-md;
+      i {
+        line-height: 50px;
       }
     }
   }
