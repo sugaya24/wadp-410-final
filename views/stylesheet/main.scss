@@ -7,6 +7,11 @@
 @import './modules/_content';
 @import './modules/_footer';
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
   font-family: 'Lato', sans-serif;
   color: $text-color-black;
