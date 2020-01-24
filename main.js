@@ -1,3 +1,8 @@
+const SM = 399;
+const MD = 767;
+const LG = 999;
+const XL = 1199;
+
 const about = document.getElementsByClassName('about')[0];
 const works = document.getElementsByClassName('works')[0];
 const blog = document.getElementsByClassName('blog')[0];
@@ -37,3 +42,39 @@ window.addEventListener('scroll', (e) => {
     window.pageYOffset > posContact
   );
 });
+
+// hamburger menu
+const hamburger = document.getElementsByClassName('hamburger-icon')[0]
+  .children[0];
+const nav = document.getElementsByClassName('nav')[0];
+const navList = nav.children;
+
+hamburger.addEventListener('click', () => {
+  hamburgerIconToggle();
+  nav.classList.toggle('open');
+});
+
+for (let i = 0; i < navList.length; i++) {
+  let list = nav.children[i];
+  list.addEventListener('click', () => {
+    hamburgerIconToggle();
+    nav.classList.toggle('open');
+    console.log(list);
+  });
+}
+
+window.addEventListener('resize', () => {
+  let innerWidth = window.innerWidth;
+  if (innerWidth > MD) {
+    hamburger.classList.remove('fa-bars');
+    hamburger.classList.remove('fa-times');
+    nav.classList.remove('open');
+  } else {
+    hamburger.classList.add('fa-bars');
+  }
+});
+
+const hamburgerIconToggle = () => {
+  hamburger.classList.toggle('fa-times');
+  hamburger.classList.toggle('fa-bars');
+};
