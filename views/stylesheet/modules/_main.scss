@@ -3,17 +3,25 @@
 
 main {
   width: $container-width-xl;
-  margin: 200px auto 0;
+  padding-top: 100px;
+  margin: 0 auto;
   @include mq-down(lg) {
     width: $container-width-lg;
   }
   @include mq-down() {
     width: $container-width-md;
-    margin: 0 auto;
+    padding-top: 50px;
   }
   h2 {
     margin-bottom: 50px;
     font-size: 32px;
+  }
+  #profile {
+    padding-top:100px;
+    margin-top:-100px;
+    @include mq-down() {
+      padding-top: 50px;
+    }
   }
   .profile {
     width: $container-width-xl;
@@ -74,6 +82,13 @@ main {
       }
     }
   }
+  #about {
+    padding-top:100px;
+    margin-top:-100px;
+    @include mq-down() {
+      padding-top: 50px;
+    }
+  }
   .about {
     p {
       margin-bottom: 20px;
@@ -89,6 +104,13 @@ main {
         border: 1px solid #333333;
         border-radius: 2px;
       }
+    }
+  }
+  #works {
+    padding-top:100px;
+    margin-top:-100px;
+    @include mq-down() {
+      padding-top: 50px;
     }
   }
   .works {
@@ -128,7 +150,13 @@ main {
       }
     }
   }
-
+  #blog {
+    padding-top:100px;
+    margin-top:-100px;
+    @include mq-down() {
+      padding-top: 50px;
+    }
+  }
   .blog {
     .article {
       margin-bottom: 20px;
@@ -151,7 +179,13 @@ main {
       }
     }
   }
-
+  #contact {
+    padding-top:100px;
+    margin-top:-100px;
+    @include mq-down() {
+      padding-top: 50px;
+    }
+  }
   .contact {
     .input {
       display: block;
