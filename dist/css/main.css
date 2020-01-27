@@ -202,7 +202,7 @@ main .profile .container {
 main .profile .icon {
   width: 200px;
   height: 200px;
-  background-image: url("img/icon.JPG");
+  background-image: url("../../../img/icon.JPG");
   background-position: center;
   background-size: cover;
   border: 7px solid #0d7377;
